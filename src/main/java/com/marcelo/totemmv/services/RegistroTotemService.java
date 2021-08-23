@@ -17,7 +17,7 @@ public class RegistroTotemService {
 
 	@Autowired
 	RegistroTotemRepository registroTotemRepository;
-	FilaSenhaRepository filaSenhaRepository;
+	
 
 	public String salvar(RegistroTotem registroTotem) {
 

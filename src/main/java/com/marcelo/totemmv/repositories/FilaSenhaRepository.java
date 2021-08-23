@@ -12,6 +12,6 @@ import com.marcelo.totemmv.domain.FilaSenha;
 @Repository
 public interface FilaSenhaRepository extends JpaRepository<FilaSenha, Long>  {
 
-	@Query(value = "SELECT * FROM FilaSenha WHERE idRegistroTotem = :id", nativeQuery = true)
-	List<FilaSenha> findByIdFilaSenhaIdRegistroTotem(@Param("id") Long id);
+//	@Query(value = "SELECT * FROM FilaSenha WHERE idRegistroTotem = :id", nativeQuery = true)
+//	List<FilaSenha> findByIdFilaSenhaIdRegistroTotem(@Param("id") Long id);
 }

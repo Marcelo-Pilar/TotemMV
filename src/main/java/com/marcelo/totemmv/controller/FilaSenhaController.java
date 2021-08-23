@@ -1,26 +1,13 @@
 package com.marcelo.totemmv.controller;
 
-import javax.validation.Valid;
-
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.marcelo.totemmv.domain.FilaSenha;
-import com.marcelo.totemmv.services.FilaSenhaServices;
-
-import lombok.AllArgsConstructor;
 //AJEITAR OS CAMPOS(INCONCLUÍDOS)
-@AllArgsConstructor
-@RestController
-@RequestMapping("/filaSenha")
+//@AllArgsConstructor
+//@RestController
+//@RequestMapping("/filaSenha")
 public class FilaSenhaController {
 	
 //	private FilaSenhaRepository filaSenhaRepository;
-	private FilaSenhaServices filaSenhaServices;
+//	private FilaSenhaServices filaSenhaServices;
 
 //	@PostMapping
 //	@ResponseStatus(HttpStatus.CREATED)
