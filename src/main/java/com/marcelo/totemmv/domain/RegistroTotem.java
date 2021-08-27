@@ -1,28 +1,31 @@
 package com.marcelo.totemmv.domain;
 
+
+
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 public class RegistroTotem implements Serializable {
-	private static final long serialVersionUID = 1L;
-
-	
+	private static final long serialVersionUID = 1L;	
 	
 	@Id	
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Long id;	
 	
+	@OneToMany
+	private List<FilaSenha> filaSenha;
 	
-//	private List<FilaSenha> filaSenha;
 	
 	@Column(nullable = false, length = 30, unique = false)
 	@JsonFormat(pattern = "dd/MM/yyyy")
@@ -71,10 +74,10 @@ public class RegistroTotem implements Serializable {
 
 	public RegistroTotem(Long id,LocalDate dataCadastro, String empresa, String nomeTotem, String origem,
 			String nomeImpressora, String modeloImpressora, String tipoImpressao, String nomeComputador,
-			String prestador, String setor, Integer avancoPapel, String usuario) {
+			String prestador, String setor, Integer avancoPapel, String usuario, List<FilaSenha> filaSenha) {
 		super();
 		this.id = id;
-//		this.filaSenha = filaSenha;
+		this.filaSenha = filaSenha;
 		this.dataCadastro = dataCadastro;
 		this.empresa = empresa;
 		this.nomeTotem = nomeTotem;
@@ -89,13 +92,13 @@ public class RegistroTotem implements Serializable {
 		this.usuario = usuario;
 	}
 
-//	public List<Object> getFilaSenha() {
-//		return filaSenha;
-//	}
-//
-//	public void setFilaSenha(List<Object> filaSenha) {
-//		this.filaSenha = filaSenha;
-//	}
+	public List<FilaSenha> getFilaSenha() {
+		return filaSenha;
+	}
+
+	public void setFilaSenha(List<FilaSenha> filaSenha) {
+		this.filaSenha = filaSenha;
+	}
 
 	public String getUsuario() {
 		return usuario;
